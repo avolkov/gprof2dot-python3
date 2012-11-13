@@ -65,6 +65,3 @@ def main():
     else:
         parser.print_usage()
     return parser
-
-if __name__ == "__main__":
-    main()

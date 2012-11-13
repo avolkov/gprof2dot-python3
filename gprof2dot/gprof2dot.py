@@ -2893,7 +2893,3 @@ class Main:
         profile.prune(self.options.node_thres/100.0, self.options.edge_thres/100.0)
 
         dot.graph(profile, self.theme)
-
-
-if __name__ == '__main__':
-    Main().main()

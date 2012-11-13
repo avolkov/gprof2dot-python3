@@ -1,5 +1,4 @@
-.*.sw?
-*.dot
-*.orig
-*.png
 *.pyc
+build/
+dist/
+*.egg-info/
