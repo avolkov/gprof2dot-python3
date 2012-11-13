@@ -31,7 +31,7 @@ import textwrap
 import optparse
 import xml.parsers.expat
 
-if sys.version_info.major == 3:
+if sys.version_info[0] == 3:
     unicode = str
 else:
     bytes = str
@@ -2356,7 +2356,7 @@ class PstatsParser:
         try:
             self.stats = pstats.Stats(*filename)
         except ValueError:
-            if sys.version_info.major == 3:
+            if sys.version_info[0] == 3:
                 raise
             import hotshot.stats
             self.stats = hotshot.stats.load(filename[0])
@@ -2752,9 +2752,9 @@ class DotWriter:
         'data' stream type str, which is ambiguous and the only way to
         make it work in both python 2 & 3 is to explicitly detect version.
         """
-        if isinstance(data, bytes) and sys.version_info.major == 3:
+        if isinstance(data, bytes) and sys.version_info[0] == 3:
             data = data.decode('utf-8')
-        if isinstance(data, unicode) and sys.version_info.major == 2:
+        if isinstance(data, unicode) and sys.version_info[0] == 2:
             data = data.encode('utf-8')
         self.fp.write(data)
 
