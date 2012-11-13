@@ -16,11 +16,12 @@ class StringTests(unittest.TestCase):
         dw = DotWriter(None)
         out = dw.escape(bs)
         assert isinstance(out, bytes)
+
     def test_UnicodeString(self):
         us = unicode("test string\\u8034")
         dw = DotWriter(None)
         out = dw.escape(us)
         assert isinstance(out, bytes)
-        
+
 if __name__ == "__main__":
     unittest.main()

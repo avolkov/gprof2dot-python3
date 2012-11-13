@@ -41,7 +41,6 @@ do
                 continue
             fi
         fi
-
 		command="$GPROF2DOT -f $FORMAT -o $NAME.dot $PROFILE"
 		echo $command
 		echo $command | sh || continue

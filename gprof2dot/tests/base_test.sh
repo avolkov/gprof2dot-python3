@@ -15,8 +15,8 @@ dot -Tpng -o out.png out.profile
 if [ -f out.png ]
 then
     echo "Success!"
-    exit 0 
+    exit 0
 else
     echo "Failed!"
     exit 1
-fi 
+fi
