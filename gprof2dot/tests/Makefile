@@ -1,5 +1,7 @@
 run:
 	./runtests.sh
+runall: all
+
 clean:
 	./clean.sh
 basic:

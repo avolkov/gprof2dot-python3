@@ -2746,8 +2746,15 @@ class DotWriter:
         return text.encode('utf-8')
 
     def write(self, data):
-        if isinstance(data, bytes):
+        """
+        Need to detect python version because it's impossible to 
+        open the streams either as bytes or unicode. So I need 
+        to deal with ambiguity of str.
+        """
+        if isinstance(data, bytes) and sys.version_info.major == 3:
             data = data.decode('utf-8')
+        if isinstance(data, unicode) and sys.version_info.major == 2:
+            data = data.encode('utf-8')
         self.fp.write(data)
 
 
