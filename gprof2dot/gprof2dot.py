@@ -1928,7 +1928,7 @@ class SharkParser(LineParser):
                 raise ParseError('failed to parse', line)
 
             fields = mo.groupdict()
-            prefix = len(fields.get('prefix', 0)) / 2 - 1
+            prefix = len(fields.get('prefix', 0)) // 2 - 1
 
             symbol = str(fields.get('symbol', 0))
             image = str(fields.get('image', 0))

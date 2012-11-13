@@ -1,5 +1,4 @@
-install:
-	make clean
+install: clean
 	python setup.py install
 clean:
 	rm -rf build  dist gprof2dot.egg-info
@@ -8,5 +7,4 @@ runtests:
 runbasic:
 	cd gprof2dot/tests/ && make basic
 cleantests:
-	cd gprof2dot/tests/
-	ls
+	cd gprof2dot/tests/ && make clean
