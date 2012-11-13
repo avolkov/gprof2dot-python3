@@ -2,3 +2,6 @@
 *.orig.dot
 *.png
 *.dot
+core
+out.profile
+test.profile
